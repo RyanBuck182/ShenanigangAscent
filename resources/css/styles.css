@@ -1,0 +1,66 @@
+html {
+    background-color: black;
+    color: white;
+    font-family: 'Consolas', 'Lucida Console', 'Cascadia Mono', 'Andale Mono', monospace;
+    overflow: hidden;
+    overflow-y: visible;
+}
+
+::selection {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+body {
+    margin: 0;
+}
+
+#console {
+    display: grid;
+    width: min(99dvw, 1000px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-block: 0.8dvh;
+}
+
+.consoleLine {
+    white-space: pre-wrap;
+}
+
+#consoleInput {
+    position: fixed;
+    background: inherit;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    padding: 0;
+}
+
+#consoleInput:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+}
+
+#consoleInput::placeholder {
+    color: red;
+    opacity: 0.6;
+}
+
+::-webkit-scrollbar {
+    width: 0.5dvw;
+    scroll-margin-right: 0.2dvw;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: none; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(50, 50, 50);
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(75, 75, 75); 
+}
